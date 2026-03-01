@@ -1,4 +1,4 @@
-2e3\w<#
+<#
 .SYNOPSIS
     Retrieve Fortify on Demand tenant summary via the FoD API.
 .DESCRIPTION

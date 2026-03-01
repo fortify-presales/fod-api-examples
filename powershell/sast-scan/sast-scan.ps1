@@ -62,10 +62,10 @@
     upload larger fragments (useful on fast networks), or decrease to reduce memory usage.
 
 .EXAMPLE
-    .\fod-scan.ps1 -FodApiUrl https://api.example.com -FodClientId abc -FodClientSecret def -PackageName .\scan.zip -ReleaseId 12345 -Verbose
+    .\sast-scan.ps1 -FodApiUrl https://api.example.com -FodClientId abc -FodClientSecret def -PackageName .\scan.zip -ReleaseId 12345 -Verbose
 
 .EXAMPLE
-    .\fod-scan.ps1 -FodApiUrl https://api.example.com -FodUsername user -FodPassword pass -FodTenant tenant -PackageName .\scan.zip -ApplicationName MyApp -ReleaseName "2025.1" -WaitFor -PollingInterval 15
+    .\sast-scan.ps1 -FodApiUrl https://api.example.com -FodUsername user -FodPassword pass -FodTenant tenant -PackageName .\scan.zip -ApplicationName MyApp -ReleaseName "2025.1" -WaitFor -PollingInterval 15
 #>
 
 [CmdletBinding()]
@@ -118,8 +118,6 @@ param(
 
 # Set error action preference
 $ErrorActionPreference = "Stop"
-
-# (removed Get-EnvName - not used anywhere; explicit env names are defined in $envMap)
 
 function Parse-IniSection {
     param(
